@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>イベント申込</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/autosize.min.js"></script>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+<input type="checkbox" class="checkbox-menu" id="checkbox-menu">
+<label class="menu-open" for="checkbox-menu"><i class="icon">menu</i></label>
+<label class="menu-close anim_001" for="checkbox-menu"></label>
+<menu class="anim_001">
+	<div class="menu-wrapper">
+		<dl>
+			<dt>Menu Title</dt>
+			<div class="item">
+				<dd>
+					<a href="#1" for="checkbox-menu">Menu Items</a>
+					<a href="#2"><label for="checkbox-menu">Menu Items</label></a>
+					<a href="#3"><label for="checkbox-menu">Menu Items</label></a>
+					<a href="#4"><label for="checkbox-menu">Menu Items</label></a>
+				</dd>
+			</div>
+			<dt>Menu Title</dt>
+			<div class="item">
+				<dd>
+					<a href="#5"><label for="checkbox-menu">Menu Items</label></a>
+					<a href="#6"><label for="checkbox-menu">Menu Items</label></a>
+					<a href="#7"><label for="checkbox-menu">Menu Items</label></a>
+					<a href="#8"><label for="checkbox-menu">Menu Items</label></a>
+				</dd>
+			</div>
+		</dl>
+	</div>
+</menu>
+
+
+<article class="anim_001">	
+	<section id="sheet-top" class="sheet">
+		<p>Neither too close to nor too distant</p>
+	</section>
+	<section id="event-entry" class="sheet">
+		<div class="content">
+			<form method="post" action="">
+				<table class="entry-sheet">
+					<tbody>
+						<tr>
+							<td>
+								<label>名前</label>
+							</td><td>
+								<span class="block"><label for="first_name">姓</label></span>
+								<input id="first_name" type="text" name="var_str_first_name" placeholder="姓" pattern="[^\x20-\x7E]*">
+								<p class="aux">全(<span class="hira">ひら</span>/<span class="kana">カナ</span>/<span class="kanji">漢字</span>/<span class="num">数字</span>)</p>
+								
+							</td>
+							<td>
+								<span class="block"><label for="last_name">名</label></span>
+								<input id="last_name" type="text" name="var_str_last_name" placeholder="名"  pattern="[^\x20-\x7E]*">
+								<p class="aux">全(<span class="hira">ひら</span>/<span class="kana">カナ</span>/<span class="kanji">漢字</span>/<span class="num">数字</span>)</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label>フリガナ</label>
+							</td><td>
+								<span class="block"><label for="first_kana">セイ</label></span>
+								<input id="first_kana" type="text" name="var_str_first_kana" placeholder="姓カナ" pattern="[\u30A1-\u30F6]*">
+								<p class="aux">全角(<span class="hira">ひら</span>/<span class="kana">カナ</span>/<span class="kanji">漢字</span>/<span class="num">数字</span>)</p>
+							</td><td>
+								<span class="block"><label for="last_kana">メイ</label></span>
+								<input id="last_kana" type="text" name="var_str_last_kana" placeholder="名カナ"  pattern="[\u30A1-\u30F6]*">
+								<p class="aux">全角(<span class="hira">ひら</span>/<span class="kana">カナ</span>/<span class="kanji">漢字</span>/<span class="num">数字</span>)</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label>性別</label>
+							</td><td>
+								<label for="sex_1">M</label><input id="sex_1" type="radio" name="var_int_sex" value="1">
+								<label for="sex_2">F</label><input id="sex_2" type="radio" name="var_int_sex" value="2">
+							</td>
+						</tr><tr>
+							<td>
+								<label for="phone">電話番号</label>
+							</td><td>
+								<input id="phone" type="text" name="var_int_phone" placeholder="連絡先電話番号">
+								<p class="aux">半角(<span class="num">数字</span>)</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label for="post">郵便番号</label>
+							</td><td>
+								<input id="post" type="number" name="var_int_post" placeholder="郵便番号">
+								<p class="aux">半角(<span class="num">数字</span>)</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label for="prefection">都道府県</label>
+							</td><td>
+								<select id="prefection" name="var_str_prefection">
+									<option value="tokyo">東京</option>
+								</select>
+							</td>
+						</tr><tr>
+							<td>
+								<label for="address">住所</label>
+							</td><td>
+								<input id="address" type="text" name="var_str_address" placeholder="住所">
+								<p class="aux">全角(<span class="hira">ひら</span>/<span class="kana">カナ</span>/<span class="kanji">漢字</span>/<span class="num">数字</span>)</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label for="emergy">緊急連絡先</label>
+							</td><td>
+								<input id="emergy" type="text" name="var_int_emergy" placeholder="緊急連絡先電話番号">
+								<p class="aux">半角(<span class="num">数字</span>)</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label for="relation">続柄</label>
+							</td><td>
+								<input id="relation" type="text" name="var_str_relation" placeholder="続柄">
+							</td>
+						</tr><tr>
+							<td>
+								<label for="student_id">番号</label>
+							</td><td>
+								<input id="student_id" type="number" name="var_int_student_id" placeholder="番号">
+								<p class="aux">半角(<span class="num">数字</span>)</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label for="student_status">状況</label>
+							</td><td>
+								<input id="student_status" type="number" name="var_int_student_status" placeholder="状況">
+							</td>
+						</tr><tr>
+							<td>
+								<label for="flag_mail">団体メール</label>
+							</td><td>
+								<input id="flag_mail" type="checkbox" name="var_int_flag_mail" value="1">
+								<p class="aux">連絡メールを受け取る</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label for="flag_death">訃報</label>
+							</td><td>
+								<input id="flag_death" type="checkbox" name="var_int_flag_death" value="1">
+								<p class="aux">連絡メールを受け取る</p>
+							</td>
+						</tr><tr>
+							<td>
+								<label for="flag_celeb">祝賀</label>
+							</td><td>
+								<input id="flag_celeb" type="checkbox" name="var_int_flag_celeb" value="1">
+								<p class="aux">連絡メールを受け取る</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button type="submit" name="bt_type" value="entry">送信</button>
+			</form>
+		</div>
+	</section>
+
+	<section>
+		<div class="event">
+			<h3>EventName</h3>
+			<p>It might be easier not to have friend at here, but must be easier to have some friends beside your life. 'Opportunities' are here. <span class="more">more</span></p>
+			<span class="san san_blue">SAITAMA</span>
+			<span class="san san_green">KANAGAWA</span>
+			<span class="san san_red">TOKYO</span>
+			<span class="san san_orange">MEGURO</span>
+		</div>
+	</section>
+
+	<section>
+		<div class="event">
+			<h3>TEST</h3>
+			<p>It might be easier not to have friend at here, but must be easier to have some friends beside your life. 'Opportunities' are here. <span class="more">more</span></p>
+		</div>
+	</section>
+</article>
+
+
+</body>
+</html>
